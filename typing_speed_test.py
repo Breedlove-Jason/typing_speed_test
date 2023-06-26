@@ -17,7 +17,7 @@ def generate_random_words(num_words):
     return rand_words
 
 
-random_words = generate_random_words(100)
+random_words = generate_random_words(25)
 stripped_words = [re.sub(r"[^a-zA-Z0-9]+", '', word) for word in random_words]
 text = " ".join(stripped_words)
 
@@ -91,10 +91,3 @@ def check_input(event):
 
 start_time = 0
 window.mainloop()
-
-# TODO: split words into characters and validate each character against the entry
-
-# TODO Measure time taken to type by counting the number of seconds between the start and end of the test and divide 
-#  the number of characters by the number of seconds to get the number of characters per second
-
-# words_per_minute = (words_typed / elapsed_time) * 60
