@@ -23,7 +23,7 @@ class TypingSpeedTest:
         self.text = None
         self.stripped_words = None
         self.random_words = None
-        self.words_num = 10
+        self.words_num = 20
         self.window = tk.Tk()
         self.window.title("Typing Speed Test")
         self.window.geometry("1300x600")
@@ -118,11 +118,11 @@ class TypingSpeedTest:
 
     def stop_test(self):
         """
-        Stops the current typing test.
+          Stops the current typing test.
 
-        It unbinds the event for checking the input, enables the input field,
-        generates new words for the next test, and updates the results.
-        """
+          It unbinds the event for checking the input, enables the input field,
+          generates new words for the next test, and updates the results.
+          """
         self.entry.unbind("<KeyRelease>")
         self.entry.configure(state="normal")
 
@@ -147,9 +147,20 @@ class TypingSpeedTest:
         self.results.append(result)
 
         with open("scores.txt", "a") as f:
-            f.write("\n".join(self.results))
+            f.write(result + "\n")
 
-        self.results = self.results[::-1]
+        # Clear previous results except for the most recent one
+        self.results = self.results[-1:]
+
+        # Remove previous result labels from the main screen
+        for child in self.window.winfo_children():
+            if isinstance(child, tk.Label):
+                child.pack_forget()
+
+        # Display the most recent result on the main screen
+        result_label = tk.Label(self.window, text=result, font=tkfont.Font(family=FONT_FAMILY, size=FONT_SIZE),
+                                bg=BG_COLOR, fg=TEXT_COLOR)
+        result_label.pack(padx=10, pady=10)
 
     def calculate_result(self):
         """
@@ -160,9 +171,7 @@ class TypingSpeedTest:
         end_time = time.time()
         elapsed_time = end_time - self.start_time
         words_per_minute = (len(self.text) / elapsed_time) * 60
-        result_text = f"Time: {elapsed_time:.2f} seconds\n"
-        result_text += f"Speed: {words_per_minute:.2f} words per minute"
-        return result_text
+        return f"Time: {elapsed_time:.2f} seconds | Speed: {words_per_minute:.2f} WPM"
 
     def show_scores(self):
         """
@@ -217,9 +226,6 @@ class TypingSpeedTest:
             self.stop_test()
             result = self.calculate_result()
             self.results.append(result)
-            result_label = tk.Label(self.window, text=result, font=tkfont.Font(family=FONT_FAMILY, size=FONT_SIZE),
-                                    bg=BG_COLOR, fg=TEXT_COLOR)
-            result_label.pack(padx=10, pady=10)
 
     def run(self):
         """
