@@ -82,4 +82,34 @@ Speed: 431.71 words per minute
 Time: 1.67 seconds
 Speed: 431.67 words per minute
 Time: 8.62 seconds
-Speed: 76.53 words per minute
+Speed: 76.53 words per minuteTime: 2.33 seconds
+Speed: 308.81 words per minuteTime: 2.33 seconds
+Speed: 308.81 words per minute
+Time: 2.33 seconds
+Speed: 308.79 words per minute
+Time: 3.71 seconds
+Speed: 129.33 words per minuteTime: 6.24 seconds
+Speed: 96.21 words per minuteTime: 6.24 seconds
+Speed: 96.21 words per minute
+Time: 6.24 seconds
+Speed: 96.20 words per minute
+Time: 3.24 seconds
+Speed: 92.59 words per minuteTime: 7.71 seconds
+Speed: 101.10 words per minuteTime: 7.71 seconds
+Speed: 101.10 words per minute
+Time: 7.72 seconds
+Speed: 101.00 words per minute
+Time: 5.85 seconds
+Speed: 82.00 words per minuteTime: 8.49 seconds
+Speed: 77.72 words per minuteTime: 8.49 seconds
+Speed: 77.72 words per minute
+Time: 8.49 seconds
+Speed: 77.71 words per minute
+Time: 6.01 seconds
+Speed: 79.92 words per minuteTime: 3.17 seconds
+Speed: 151.64 words per minuteTime: 3.17 seconds
+Speed: 151.64 words per minute
+Time: 3.17 seconds
+Speed: 151.63 words per minute
+Time: 5.98 seconds
+Speed: 120.33 words per minute

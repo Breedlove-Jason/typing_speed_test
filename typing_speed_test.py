@@ -166,10 +166,10 @@ class TypingSpeedTest:
 
     def show_scores(self):
         """
-        Displays the test scores in a separate window.
+           Displays the test scores in a separate window.
 
-        It creates a new window and a listbox to display the test scores.
-        """
+           It creates a new window and a listbox to display the test scores.
+           """
         scores_window = tk.Toplevel(self.window)
         scores_window.title("Test Scores")
         scores_window.configure(background=BG_COLOR)
@@ -185,18 +185,11 @@ class TypingSpeedTest:
             for line in f:
                 line = line.strip()
                 if line:
-                    scores.append(line)
+                    scores.append(line)  # convert line to integer
 
         # Insert scores into the listbox
         for score in scores:
             scores_listbox.insert(tk.END, score)
-
-        # Display only the most recent high score in the main window
-        if scores:
-            high_score = max(scores)
-            result_label = tk.Label(self.window, text=high_score, font=tkfont.Font(family=FONT_FAMILY, size=FONT_SIZE),
-                                    bg=BG_COLOR, fg=TEXT_COLOR)
-            result_label.pack_forget()
 
     def check_input(self, event):
         """
