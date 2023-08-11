@@ -3,6 +3,12 @@
 The Typing Speed Test is a simple and interactive application that allows users to measure their typing speed and accuracy. It presents users with a random set of words that they need to type as quickly and accurately as possible. The application calculates the typing speed in words per minute (WPM) and provides real-time feedback on the user's performance.
 
 ![typing_speed_test.png](typing_speed_test.png)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/j-breedlove/typing_speed_test.git
+cd typing_speed_test
+```
 ## Features
 
 - Random word generation: Each typing test generates a unique set of words, ensuring a fresh and challenging experience every time.
